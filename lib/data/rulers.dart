@@ -3,6 +3,20 @@ import 'package:ddm_gRPC/generated/meta_data/meta_data.pb.dart';
 class StaticDataPool {
   static List<Ruler> rulers = [
     Ruler(
+      instruction: '''官方组件-default。提供样例模板。
+      `source`为来源名，有两个保留字段("office_meta","office")，分别代表官方元组件，官方组件。
+      `rulerName`为规则名，没有特别要求。
+      `scenesUsed`为应用场景，要求英文全小写带下连字符，中文要求尽量简短。
+      `metaData`元数据，使用枚举类型来描述功能，元数据是一个列表，每一个值对应一种组件，这个在office_meta的示范样例中可以看得出。
+      `instruction`用于介绍组件的使用方法。标注了部分组件的特殊用法。''',
+      rulerId: RulerId(
+        source: 'office_meta',
+        ruleName: 'pass_word',
+      ),
+      scenesUsed: ['pass_word'],
+      metaData: [MetaData.PASS_WORD],
+    ),
+    Ruler(
       instruction: '官方组件-title。用于提供一个大号加粗字体的标题，用于给手账、密码本等提供可见的标题',
       rulerId: RulerId(
         source: 'office_meta',
