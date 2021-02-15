@@ -13,38 +13,118 @@ import 'meta_data.pbenum.dart';
 
 export 'meta_data.pbenum.dart';
 
+class Empty extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Empty', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'rulers'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  Empty._() : super();
+  factory Empty() => create();
+  factory Empty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Empty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Empty clone() => Empty()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Empty copyWith(void Function(Empty) updates) => super.copyWith((message) => updates(message as Empty)) as Empty; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Empty create() => Empty._();
+  Empty createEmptyInstance() => create();
+  static $pb.PbList<Empty> createRepeated() => $pb.PbList<Empty>();
+  @$core.pragma('dart2js:noInline')
+  static Empty getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Empty>(create);
+  static Empty? _defaultInstance;
+}
+
+class RulerId extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RulerId', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'rulers'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'source')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ruleName', protoName: 'ruleName')
+    ..hasRequiredFields = false
+  ;
+
+  RulerId._() : super();
+  factory RulerId({
+    $core.String? source,
+    $core.String? ruleName,
+  }) {
+    final _result = create();
+    if (source != null) {
+      _result.source = source;
+    }
+    if (ruleName != null) {
+      _result.ruleName = ruleName;
+    }
+    return _result;
+  }
+  factory RulerId.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RulerId.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  RulerId clone() => RulerId()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  RulerId copyWith(void Function(RulerId) updates) => super.copyWith((message) => updates(message as RulerId)) as RulerId; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RulerId create() => RulerId._();
+  RulerId createEmptyInstance() => create();
+  static $pb.PbList<RulerId> createRepeated() => $pb.PbList<RulerId>();
+  @$core.pragma('dart2js:noInline')
+  static RulerId getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RulerId>(create);
+  static RulerId? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get source => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set source($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSource() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSource() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get ruleName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set ruleName($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasRuleName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRuleName() => clearField(2);
+}
+
 class Ruler extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Ruler', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'rulers'), createEmptyInstance: create)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stars', $pb.PbFieldType.O3)
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'source')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'instruction')
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ruleName', protoName: 'ruleName')
-    ..pPS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scenesUsed', protoName: 'scenesUsed')
-    ..pc<MetaData>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metaData', $pb.PbFieldType.PE, protoName: 'metaData', valueOf: MetaData.valueOf, enumValues: MetaData.values)
+    ..aOM<RulerId>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rulerId', protoName: 'rulerId', subBuilder: RulerId.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'instruction')
+    ..pPS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scenesUsed', protoName: 'scenesUsed')
+    ..pc<MetaData>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metaData', $pb.PbFieldType.PE, protoName: 'metaData', valueOf: MetaData.valueOf, enumValues: MetaData.values)
     ..hasRequiredFields = false
   ;
 
   Ruler._() : super();
   factory Ruler({
-    $core.int? stars,
-    $core.String? source,
+    RulerId? rulerId,
     $core.String? instruction,
-    $core.String? ruleName,
     $core.Iterable<$core.String>? scenesUsed,
     $core.Iterable<MetaData>? metaData,
   }) {
     final _result = create();
-    if (stars != null) {
-      _result.stars = stars;
-    }
-    if (source != null) {
-      _result.source = source;
+    if (rulerId != null) {
+      _result.rulerId = rulerId;
     }
     if (instruction != null) {
       _result.instruction = instruction;
-    }
-    if (ruleName != null) {
-      _result.ruleName = ruleName;
     }
     if (scenesUsed != null) {
       _result.scenesUsed.addAll(scenesUsed);
@@ -75,75 +155,124 @@ class Ruler extends $pb.GeneratedMessage {
   static Ruler getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Ruler>(create);
   static Ruler? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  RulerId get rulerId => $_getN(0);
+  @$pb.TagNumber(1)
+  set rulerId(RulerId v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRulerId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRulerId() => clearField(1);
+  @$pb.TagNumber(1)
+  RulerId ensureRulerId() => $_ensure(0);
+
   @$pb.TagNumber(2)
-  $core.int get stars => $_getIZ(0);
+  $core.String get instruction => $_getSZ(1);
   @$pb.TagNumber(2)
-  set stars($core.int v) { $_setSignedInt32(0, v); }
+  set instruction($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasStars() => $_has(0);
+  $core.bool hasInstruction() => $_has(1);
   @$pb.TagNumber(2)
-  void clearStars() => clearField(2);
+  void clearInstruction() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get source => $_getSZ(1);
-  @$pb.TagNumber(3)
-  set source($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasSource() => $_has(1);
-  @$pb.TagNumber(3)
-  void clearSource() => clearField(3);
+  $core.List<$core.String> get scenesUsed => $_getList(2);
 
   @$pb.TagNumber(4)
-  $core.String get instruction => $_getSZ(2);
-  @$pb.TagNumber(4)
-  set instruction($core.String v) { $_setString(2, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasInstruction() => $_has(2);
-  @$pb.TagNumber(4)
-  void clearInstruction() => clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.String get ruleName => $_getSZ(3);
-  @$pb.TagNumber(5)
-  set ruleName($core.String v) { $_setString(3, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasRuleName() => $_has(3);
-  @$pb.TagNumber(5)
-  void clearRuleName() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.List<$core.String> get scenesUsed => $_getList(4);
-
-  @$pb.TagNumber(7)
-  $core.List<MetaData> get metaData => $_getList(5);
+  $core.List<MetaData> get metaData => $_getList(3);
 }
 
-class Empty extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Empty', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'rulers'), createEmptyInstance: create)
+class Stars extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Stars', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'rulers'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'starNumber', $pb.PbFieldType.O3, protoName: 'starNumber')
     ..hasRequiredFields = false
   ;
 
-  Empty._() : super();
-  factory Empty() => create();
-  factory Empty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Empty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  Stars._() : super();
+  factory Stars({
+    $core.int? starNumber,
+  }) {
+    final _result = create();
+    if (starNumber != null) {
+      _result.starNumber = starNumber;
+    }
+    return _result;
+  }
+  factory Stars.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Stars.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Empty clone() => Empty()..mergeFromMessage(this);
+  Stars clone() => Stars()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Empty copyWith(void Function(Empty) updates) => super.copyWith((message) => updates(message as Empty)) as Empty; // ignore: deprecated_member_use
+  Stars copyWith(void Function(Stars) updates) => super.copyWith((message) => updates(message as Stars)) as Stars; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Empty create() => Empty._();
-  Empty createEmptyInstance() => create();
-  static $pb.PbList<Empty> createRepeated() => $pb.PbList<Empty>();
+  static Stars create() => Stars._();
+  Stars createEmptyInstance() => create();
+  static $pb.PbList<Stars> createRepeated() => $pb.PbList<Stars>();
   @$core.pragma('dart2js:noInline')
-  static Empty getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Empty>(create);
-  static Empty? _defaultInstance;
+  static Stars getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Stars>(create);
+  static Stars? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get starNumber => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set starNumber($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStarNumber() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStarNumber() => clearField(1);
+}
+
+class PathData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PathData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'rulers'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'path')
+    ..hasRequiredFields = false
+  ;
+
+  PathData._() : super();
+  factory PathData({
+    $core.String? path,
+  }) {
+    final _result = create();
+    if (path != null) {
+      _result.path = path;
+    }
+    return _result;
+  }
+  factory PathData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PathData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PathData clone() => PathData()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PathData copyWith(void Function(PathData) updates) => super.copyWith((message) => updates(message as PathData)) as PathData; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PathData create() => PathData._();
+  PathData createEmptyInstance() => create();
+  static $pb.PbList<PathData> createRepeated() => $pb.PbList<PathData>();
+  @$core.pragma('dart2js:noInline')
+  static PathData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PathData>(create);
+  static PathData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get path => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set path($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPath() => clearField(1);
 }
 

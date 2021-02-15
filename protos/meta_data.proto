@@ -7,7 +7,10 @@ service DDM{
   rpc getRulers(Empty) returns (stream Ruler) {}
 
   // get ruler likes 
-  rpc getStars(RulerId) returns(Stars){}
+  rpc getStars(RulerId) returns (Stars) {}
+
+  // get path data
+  rpc getPath(RulerId) returns (stream PathData) {}
 }
 
 message Empty{}
@@ -19,12 +22,14 @@ enum MetaData{
   TITLE = 1;// title
   TEXT = 2;// text
   TIME = 3;// time
-  MESSAGE = 4;// sort text(single line)
+  MESSAGE = 4;// sort text
   // Path
   PATH = 5;
   // Picture
   IMAGE = 6;
-  
+  // passord note
+  SIGNLE_TEXT = 7;// (single line)
+  PASS_WORD = 8;
 }
 
 message RulerId {
@@ -45,6 +50,6 @@ message Stars {
   int32 starNumber = 1;
 }
 
-message MetaDataValue {
-
+message PathData {
+  string path = 1;
 }

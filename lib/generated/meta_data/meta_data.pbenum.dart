@@ -13,11 +13,23 @@ class MetaData extends $pb.ProtobufEnum {
   static const MetaData DEFAULT = MetaData._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DEFAULT');
   static const MetaData TITLE = MetaData._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TITLE');
   static const MetaData TEXT = MetaData._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TEXT');
+  static const MetaData TIME = MetaData._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TIME');
+  static const MetaData MESSAGE = MetaData._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'MESSAGE');
+  static const MetaData PATH = MetaData._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'PATH');
+  static const MetaData IMAGE = MetaData._(6, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'IMAGE');
+  static const MetaData SIGNLE_TEXT = MetaData._(7, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SIGNLE_TEXT');
+  static const MetaData PASS_WORD = MetaData._(8, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'PASS_WORD');
 
   static const $core.List<MetaData> values = <MetaData> [
     DEFAULT,
     TITLE,
     TEXT,
+    TIME,
+    MESSAGE,
+    PATH,
+    IMAGE,
+    SIGNLE_TEXT,
+    PASS_WORD,
   ];
 
   static final $core.Map<$core.int, MetaData> _byValue = $pb.ProtobufEnum.initByValue(values);

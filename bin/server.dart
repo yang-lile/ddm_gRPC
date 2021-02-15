@@ -8,6 +8,18 @@ class DDMService extends DDMServiceBase {
   Stream<Ruler> getRulers(grpc.ServiceCall call, Empty request) {
     return Stream.fromIterable(StaticDataPool.rulers);
   }
+
+  @override
+  Stream<PathData> getPath(grpc.ServiceCall call, RulerId request) {
+    // TODO: implement getPath
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Stars> getStars(grpc.ServiceCall call, RulerId request) {
+    // TODO: implement getStars
+    throw UnimplementedError();
+  }
 }
 
 Future<void> main(List<String> args) async {

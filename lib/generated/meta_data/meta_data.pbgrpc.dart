@@ -18,6 +18,14 @@ class DDMClient extends $grpc.Client {
       '/rulers.DDM/getRulers',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Ruler.fromBuffer(value));
+  static final _$getStars = $grpc.ClientMethod<$0.RulerId, $0.Stars>(
+      '/rulers.DDM/getStars',
+      ($0.RulerId value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Stars.fromBuffer(value));
+  static final _$getPath = $grpc.ClientMethod<$0.RulerId, $0.PathData>(
+      '/rulers.DDM/getPath',
+      ($0.RulerId value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.PathData.fromBuffer(value));
 
   DDMClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -28,6 +36,18 @@ class DDMClient extends $grpc.Client {
       {$grpc.CallOptions? options}) {
     return $createStreamingCall(
         _$getRulers, $async.Stream.fromIterable([request]),
+        options: options);
+  }
+
+  $grpc.ResponseFuture<$0.Stars> getStars($0.RulerId request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getStars, request, options: options);
+  }
+
+  $grpc.ResponseStream<$0.PathData> getPath($0.RulerId request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(
+        _$getPath, $async.Stream.fromIterable([request]),
         options: options);
   }
 }
@@ -43,6 +63,20 @@ abstract class DDMServiceBase extends $grpc.Service {
         true,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Ruler value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RulerId, $0.Stars>(
+        'getStars',
+        getStars_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.RulerId.fromBuffer(value),
+        ($0.Stars value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RulerId, $0.PathData>(
+        'getPath',
+        getPath_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) => $0.RulerId.fromBuffer(value),
+        ($0.PathData value) => value.writeToBuffer()));
   }
 
   $async.Stream<$0.Ruler> getRulers_Pre(
@@ -50,5 +84,18 @@ abstract class DDMServiceBase extends $grpc.Service {
     yield* getRulers(call, await request);
   }
 
+  $async.Future<$0.Stars> getStars_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.RulerId> request) async {
+    return getStars(call, await request);
+  }
+
+  $async.Stream<$0.PathData> getPath_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.RulerId> request) async* {
+    yield* getPath(call, await request);
+  }
+
   $async.Stream<$0.Ruler> getRulers($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$0.Stars> getStars($grpc.ServiceCall call, $0.RulerId request);
+  $async.Stream<$0.PathData> getPath(
+      $grpc.ServiceCall call, $0.RulerId request);
 }
