@@ -11,6 +11,8 @@ service DDM{
 
   // get path data
   rpc getPath(RulerId) returns (stream PathData) {}
+
+  rpc getVersion(Version) returns (NeedUpdate) {}
 }
 
 message Empty{}
@@ -52,4 +54,12 @@ message Stars {
 
 message PathData {
   string path = 1;
+}
+
+message Version {
+  int32 version = 1;
+}
+
+message NeedUpdate{
+  bool needUpdate = 1;
 }

@@ -20,6 +20,17 @@ class DDMService extends DDMServiceBase {
     // TODO: implement getStars
     throw UnimplementedError();
   }
+
+  @override
+  Future<NeedUpdate> getVersion(grpc.ServiceCall call, Version request) {
+    if (request.version < StaticDataPool.version) {
+      return Future.value(NeedUpdate(needUpdate: true));
+    } else if (request.version == StaticDataPool.version) {
+      return Future.value(NeedUpdate(needUpdate: false));
+    } else {
+      return Future.error(400);
+    }
+  }
 }
 
 Future<void> main(List<String> args) async {

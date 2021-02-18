@@ -77,3 +77,23 @@ const PathData$json = const {
 
 /// Descriptor for `PathData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List pathDataDescriptor = $convert.base64Decode('CghQYXRoRGF0YRISCgRwYXRoGAEgASgJUgRwYXRo');
+@$core.Deprecated('Use versionDescriptor instead')
+const Version$json = const {
+  '1': 'Version',
+  '2': const [
+    const {'1': 'version', '3': 1, '4': 1, '5': 5, '10': 'version'},
+  ],
+};
+
+/// Descriptor for `Version`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List versionDescriptor = $convert.base64Decode('CgdWZXJzaW9uEhgKB3ZlcnNpb24YASABKAVSB3ZlcnNpb24=');
+@$core.Deprecated('Use needUpdateDescriptor instead')
+const NeedUpdate$json = const {
+  '1': 'NeedUpdate',
+  '2': const [
+    const {'1': 'needUpdate', '3': 1, '4': 1, '5': 8, '10': 'needUpdate'},
+  ],
+};
+
+/// Descriptor for `NeedUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List needUpdateDescriptor = $convert.base64Decode('CgpOZWVkVXBkYXRlEh4KCm5lZWRVcGRhdGUYASABKAhSCm5lZWRVcGRhdGU=');

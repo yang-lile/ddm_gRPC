@@ -1,6 +1,7 @@
 import 'package:ddm_gRPC/generated/meta_data/meta_data.pb.dart';
 
 class StaticDataPool {
+  static const version = 0;
   static List<Ruler> rulers = [
     Ruler(
       instruction: '''官方组件-default。提供样例模板。
