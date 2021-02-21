@@ -2,7 +2,7 @@ import 'package:grpc/grpc.dart' as grpc;
 import 'package:ddm_gRPC/generated/meta_data/meta_data.pbgrpc.dart';
 import 'package:ddm_gRPC/generated/meta_data/meta_data.pb.dart';
 
-void main(List<String> args) {
+void startClient(List<String> args) {
   final channel = grpc.ClientChannel(
     args.isNotEmpty ? args.first : 'localhost',
     port: args.isNotEmpty ? args[1] : 8080,
