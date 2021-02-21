@@ -17,8 +17,7 @@ class DDMService extends DDMServiceBase {
 
   @override
   Future<Stars> getStars(grpc.ServiceCall call, RulerId request) {
-    // TODO: implement getStars
-    throw UnimplementedError();
+    return Future.value(Stars(starNumber: 0));
   }
 
   @override
