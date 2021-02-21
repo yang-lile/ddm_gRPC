@@ -10,4 +10,4 @@ RUN pub get --offline
 
 CMD [  ]
 
-ENTRYPOINT ["/usr/bin/dart", "/app/bin/server.dart"]
+ENTRYPOINT ["/usr/bin/dart", "run"]

@@ -1,5 +1,6 @@
 // io from json
-import '../lib/ddm_server.dart';
+
+import 'package:ddm_gRPC/ddm_server.dart';
 
 void main(List<String> arguments) {
   // mainWrite();
