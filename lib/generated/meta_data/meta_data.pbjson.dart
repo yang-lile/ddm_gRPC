@@ -19,13 +19,13 @@ const MetaData$json = const {
     const {'1': 'MESSAGE', '2': 4},
     const {'1': 'PATH', '2': 5},
     const {'1': 'IMAGE', '2': 6},
-    const {'1': 'SIGNLE_TEXT', '2': 7},
+    const {'1': 'SINGLE_TEXT', '2': 7},
     const {'1': 'PASS_WORD', '2': 8},
   ],
 };
 
 /// Descriptor for `MetaData`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List metaDataDescriptor = $convert.base64Decode('CghNZXRhRGF0YRILCgdERUZBVUxUEAASCQoFVElUTEUQARIICgRURVhUEAISCAoEVElNRRADEgsKB01FU1NBR0UQBBIICgRQQVRIEAUSCQoFSU1BR0UQBhIPCgtTSUdOTEVfVEVYVBAHEg0KCVBBU1NfV09SRBAI');
+final $typed_data.Uint8List metaDataDescriptor = $convert.base64Decode('CghNZXRhRGF0YRILCgdERUZBVUxUEAASCQoFVElUTEUQARIICgRURVhUEAISCAoEVElNRRADEgsKB01FU1NBR0UQBBIICgRQQVRIEAUSCQoFSU1BR0UQBhIPCgtTSU5HTEVfVEVYVBAHEg0KCVBBU1NfV09SRBAI');
 @$core.Deprecated('Use emptyDescriptor instead')
 const Empty$json = const {
   '1': 'Empty',

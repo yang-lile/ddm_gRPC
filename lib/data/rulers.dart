@@ -78,7 +78,7 @@ class StaticDataPool {
         ruleName: 'single_text',
       ),
       scenesUsed: ['pass_word'],
-      metaData: [MetaData.SIGNLE_TEXT],
+      metaData: [MetaData.SINGLE_TEXT],
     ),
     Ruler(
       instruction: '官方组件-pass_word。提供隐藏数据的密码',
