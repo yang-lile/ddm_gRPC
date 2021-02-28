@@ -12,10 +12,10 @@ class StaticDataPool {
       `instruction`用于介绍组件的使用方法。标注了部分组件的特殊用法。''',
       rulerId: RulerId(
         source: 'office_meta',
-        ruleName: 'pass_word',
+        ruleName: 'default',
       ),
-      scenesUsed: ['pass_word'],
-      metaData: [MetaData.PASS_WORD],
+      scenesUsed: ['password'],
+      metaData: [MetaData.SINGLE_TEXT, MetaData.PASS_WORD],
     ),
     Ruler(
       instruction: '官方组件-title。用于提供一个大号加粗字体的标题，用于给手账、密码本等提供可见的标题',

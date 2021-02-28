@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:ddm_gRPC/data/rulers.dart';
 import 'package:ddm_gRPC/generated/meta_data/meta_data.pbgrpc.dart';
 import 'package:ddm_gRPC/generated/meta_data/meta_data.pb.dart';
@@ -17,7 +19,7 @@ class DDMService extends DDMServiceBase {
 
   @override
   Future<Stars> getStars(grpc.ServiceCall call, RulerId request) {
-    return Future.value(Stars(starNumber: 0));
+    return Future.value(Stars(starNumber: Random().nextInt(100)));
   }
 
   @override
