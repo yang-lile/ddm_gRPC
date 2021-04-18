@@ -26,6 +26,12 @@ class DDMService extends DDMServiceBase {
       return Future.error(400);
     }
   }
+
+  @override
+  Stream<PathData> getPath(grpc.ServiceCall call, RulerId request) {
+    // TODO: implement getPath
+    throw UnimplementedError();
+  }
 }
 
 Future<void> startServer({List<String> args}) async {
