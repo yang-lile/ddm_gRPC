@@ -10,12 +10,6 @@ class DDMService extends DDMServiceBase {
   }
 
   @override
-  Stream<PathData> getPath(grpc.ServiceCall call, RulerId request) {
-    // TODO: implement getPath
-    throw UnimplementedError();
-  }
-
-  @override
   Future<Stars> getStars(grpc.ServiceCall call, RulerId request) {
     // TODO: implement getStars
     throw UnimplementedError();
@@ -24,7 +18,7 @@ class DDMService extends DDMServiceBase {
 
 Future<void> main(List<String> args) async {
   // start server
-  final server = await grpc.Server([DDMService()]);
+  final server = grpc.Server([DDMService()]);
   await server.serve(port: 8080);
   print('server has start at ${server.port}');
 }

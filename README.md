@@ -2,15 +2,15 @@
 
 ddm_gRPC is Micro-Service of ddm
 
-# Compile the Document
+## Compile the Document
 
-## Generate .proto file
+### Generate .proto file
 
 ```powershell
 protoc -I protos/ protos/meta_data.proto --dart_out=grpc:lib/generated/meta_data
 ```
 
-## test server on local
+### test server on local
 
 ```powershell
 # start server
@@ -19,7 +19,7 @@ dart bin/server.dart
 dart bin/client.dart
 ```
 
-## test server on docker
+### test server on docker
 
 ```powershell
 # push to docker
@@ -35,4 +35,3 @@ docker ps
 # switch to your pc do local request, xx is your ip address, yy is your open port like this 9090
 dart bin/client.dart xx.xx.xx.xx yy
 ```
-

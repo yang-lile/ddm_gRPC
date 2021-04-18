@@ -8,9 +8,6 @@ service DDM{
 
   // get ruler likes 
   rpc getStars(RulerId) returns (Stars) {}
-
-  // get path data
-  rpc getPath(RulerId) returns (stream PathData) {}
 }
 
 message Empty{}
