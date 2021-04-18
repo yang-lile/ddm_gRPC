@@ -2,6 +2,28 @@
 
 ddm_gRPC is Micro-Service of ddm
 
+## data struct
+
+### keys struct + value struct
+
+when you using the rulers, a ruler compose by keys ruler plus value ruler.
+so a usable ruler is component ruler.
+
+```null
+Function ruler
+ +--Component ruler
+     +--ddd ruler
+     +--Value ruler
+ +--Component ruler
+     +--ddd ruler
+     +--Value ruler
+ +--Component ruler
+     +--...
+ +--Component ruler
+     +--...
+    ...
+```
+
 ## Compile the Document
 
 ### Generate .proto file
