@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package text_form_field;
+
+message primary {
+
+}
+
+message secondary {
+
+}
+
+message decoration {
+
+}
