@@ -1,8 +1,7 @@
 import 'dart:math';
 
 import 'package:ddm_gRPC/data/rulers.dart';
-import 'package:ddm_gRPC/generated/meta_data/meta_data.pbgrpc.dart';
-import 'package:ddm_gRPC/generated/meta_data/meta_data.pb.dart';
+import 'package:ddm_gRPC/generated/meta_data.pbgrpc.dart';
 import 'package:grpc/grpc.dart' as grpc;
 
 class DDMService extends DDMServiceBase {
@@ -25,12 +24,6 @@ class DDMService extends DDMServiceBase {
     } else {
       return Future.error(400);
     }
-  }
-
-  @override
-  Stream<PathData> getPath(grpc.ServiceCall call, RulerId request) {
-    // TODO: implement getPath
-    throw UnimplementedError();
   }
 }
 
