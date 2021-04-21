@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package rulers;
-import "text_form_field.proto";
+import "modules/text_form_field.proto";
 
 service DDM{
   // get all rulers
