@@ -30,6 +30,6 @@ class DDMService extends DDMServiceBase {
 Future<void> startServer({List<String> args}) async {
   // start server
   final server = grpc.Server([DDMService()]);
-  await server.serve(port: 8080);
+  await server.serve(port: 19090);
   print('server has start at ${server.port}');
 }

@@ -4,7 +4,7 @@ import 'package:grpc/grpc.dart' as grpc;
 void startClient(List<String> args) {
   final channel = grpc.ClientChannel(
     args.isNotEmpty ? args.first : 'localhost',
-    port: args.isNotEmpty ? args[1] : 8080,
+    port: args.isNotEmpty ? args[1] : 19090,
     options: const grpc.ChannelOptions(
       credentials: grpc.ChannelCredentials.insecure(),
     ),
