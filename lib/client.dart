@@ -1,6 +1,5 @@
+import 'package:ddm_gRPC/generated/meta_data.pbgrpc.dart';
 import 'package:grpc/grpc.dart' as grpc;
-import 'package:ddm_gRPC/generated/meta_data/meta_data.pbgrpc.dart';
-import 'package:ddm_gRPC/generated/meta_data/meta_data.pb.dart';
 
 void startClient(List<String> args) {
   final channel = grpc.ClientChannel(
