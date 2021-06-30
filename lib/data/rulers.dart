@@ -1,16 +1,52 @@
+import 'package:ddm_gRPC/generated/google/protobuf/any.pb.dart';
+import 'package:ddm_gRPC/generated/meta_data.pbenum.dart';
 import 'package:ddm_gRPC/generated/meta_data.pbgrpc.dart';
-import 'package:ddm_gRPC/generated/modules/text_form_field.pb.dart';
+import 'package:ddm_gRPC/generated/path.pb.dart';
 
 class StaticDataPool {
   static const version = 1;
   static List<Ruler> rulers = [
     Ruler(
-      rulerId: RulerId(source: '官方', ruleName: '文本'),
-      instruction: '提供一个演示使用的短文本',
-      scenesUsed: ['临时记录', '传输文本'],
-      pkey: Pkey(
-        textFormFieldP: primary(text: 'text'),
+      rulerId: RulerId(
+        source: 'office',
+        ruleName: 'download',
+      ),
+      describe: 'It will arrow to system download fold.',
+      scenesUsed: ['path'],
+      system: System.android,
+      data: Any.pack(
+        Path(
+          path: '/storage/emulated/0/Download',
+        ),
       ),
     ),
+    Ruler(
+      rulerId: RulerId(
+        source: 'office',
+        ruleName: 'QQ Picture',
+      ),
+      describe: 'QQ picture fold.',
+      scenesUsed: ['path'],
+      system: System.android,
+      data: Any.pack(
+        Path(
+          path: '/storage/emulated/0/Picture',
+        ),
+      ),
+    ),
+    Ruler(
+      rulerId: RulerId(
+        source: 'office',
+        ruleName: 'Note',
+      ),
+      describe: 'a simple note rule.',
+      scenesUsed: ['Note'],
+      system: System.android,
+      data: Any.pack(
+        Path(
+          path: '/storage/emulated/0/Download',
+        ),
+      ),
+    )
   ];
 }

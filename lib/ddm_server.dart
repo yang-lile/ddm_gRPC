@@ -22,6 +22,7 @@ class DDMService extends DDMServiceBase {
     } else if (request.version == StaticDataPool.version) {
       return Future.value(NeedUpdate(needUpdate: false));
     } else {
+      call.sendTrailers(status: 404, message: '出错了');
       return Future.error(400);
     }
   }
@@ -30,6 +31,6 @@ class DDMService extends DDMServiceBase {
 Future<void> startServer({List<String> args}) async {
   // start server
   final server = grpc.Server([DDMService()]);
-  await server.serve(port: 19090);
+  await server.serve(port: 19091);
   print('server has start at ${server.port}');
 }
